@@ -1,0 +1,521 @@
+488b4208448b4a184183c1f0
+GCClientSendAdd1_pattern
+00007FF900F8E1D0 | 48 89 74 24 18                | mov qword ptr ss:[rsp+18],rsi                      |
+00007FF900F8E1D5 | 57                            | push rdi                                           |
+00007FF900F8E1D6 | 48 83 EC 20                   | sub rsp,20                                         |
+00007FF900F8E1DA | 48 83 79 18 00                | cmp qword ptr ds:[rcx+18],0                        |
+00007FF900F8E1DF | 49 8B F0                      | mov rsi,r8                                         |
+00007FF900F8E1E2 | 48 8B F9                      | mov rdi,rcx                                        |
+00007FF900F8E1E5 | 75 0D                         | jne client.7FF900F8E1F4                            |
+00007FF900F8E1E7 | 32 C0                         | xor al,al                                          |
+00007FF900F8E1E9 | 48 8B 74 24 40                | mov rsi,qword ptr ss:[rsp+40]                      |
+00007FF900F8E1EE | 48 83 C4 20                   | add rsp,20                                         |
+00007FF900F8E1F2 | 5F                            | pop rdi                                            |
+00007FF900F8E1F3 | C3                            | ret                                                |
+00007FF900F8E1F4 | 48 89 5C 24 38                | mov qword ptr ss:[rsp+38],rbx                      |
+00007FF900F8E1F9 | 32 DB                         | xor bl,bl                                          |
+00007FF900F8E1FB | 45 84 C9                      | test r9b,r9b                                       |
+00007FF900F8E1FE | 74 4B                         | je client.7FF900F8E24B                             |
+00007FF900F8E200 | 48 8B CA                      | mov rcx,rdx                                        |
+00007FF900F8E203 | FF 15 3F 96 24 00             | call qword ptr ds:[<&Plat_TicksAfterMicroSecs>]    |
+00007FF900F8E209 | 48 89 44 24 30                | mov qword ptr ss:[rsp+30],rax                      |
+00007FF900F8E20E | 48 85 F6                      | test rsi,rsi                                       |
+00007FF900F8E211 | B8 50 C3 00 00                | mov eax,C350                                       |
+00007FF900F8E216 | 0F 45 C6                      | cmovne eax,esi                                     |
+00007FF900F8E219 | 48 98                         | cdqe                                               |
+00007FF900F8E21B | 48 01 05 76 A4 0F 01          | add qword ptr ds:[7FF902088698],rax                |
+00007FF900F8E222 | E8 49 96 18 00                | call client.7FF901117870                           |
+00007FF900F8E227 | 48 8B C8                      | mov rcx,rax                                        |
+00007FF900F8E22A | 48 8D 54 24 30                | lea rdx,qword ptr ss:[rsp+30]                      |
+00007FF900F8E22F | E8 9C 8C 18 00                | call client.7FF901116ED0                           |
+00007FF900F8E234 | 0F B6 D8                      | movzx ebx,al                                       |
+00007FF900F8E237 | E8 34 96 18 00                | call client.7FF901117870                           |
+00007FF900F8E23C | 48 8B C8                      | mov rcx,rax                                        |
+00007FF900F8E23F | 48 8D 54 24 30                | lea rdx,qword ptr ss:[rsp+30]                      |
+00007FF900F8E244 | E8 B7 8D 18 00                | call client.7FF901117000                           |
+00007FF900F8E249 | 0A D8                         | or bl,al                                           |
+00007FF900F8E24B | 48 8B CF                      | mov rcx,rdi                                        |
+00007FF900F8E24E | E8 2D 67 00 00                | call client.7FF900F94980                           |
+00007FF900F8E253 | 48 8B 74 24 40                | mov rsi,qword ptr ss:[rsp+40]                      |
+00007FF900F8E258 | 0F B6 C3                      | movzx eax,bl                                       |
+00007FF900F8E25B | 48 8B 5C 24 38                | mov rbx,qword ptr ss:[rsp+38]                      |
+00007FF900F8E260 | 48 83 C4 20                   | add rsp,20                                         |
+00007FF900F8E264 | 5F                            | pop rdi                                            |
+00007FF900F8E265 | C3                            | ret                                                |
+00007FF900F8E266 | CC                            | int3                                               |
+00007FF900F8E267 | CC                            | int3                                               |
+00007FF900F8E268 | CC                            | int3                                               |
+00007FF900F8E269 | CC                            | int3                                               |
+00007FF900F8E26A | CC                            | int3                                               |
+00007FF900F8E26B | CC                            | int3                                               |
+00007FF900F8E26C | CC                            | int3                                               |
+00007FF900F8E26D | CC                            | int3                                               |
+00007FF900F8E26E | CC                            | int3                                               |
+00007FF900F8E26F | CC                            | int3                                               |
+00007FF900F8E270 | 48 8B 42 08                   | mov rax,qword ptr ds:[rdx+8]                       |
+00007FF900F8E274 | 44 8B 4A 18                   | mov r9d,dword ptr ds:[rdx+18]                      |
+00007FF900F8E278 | 41 83 C1 F0                   | add r9d,FFFFFFF0                                   |
+00007FF900F8E27C | 8B 10                         | mov edx,dword ptr ds:[rax]                         |
+00007FF900F8E27E | 4C 8D 40 10                   | lea r8,qword ptr ds:[rax+10]                       |
+00007FF900F8E282 | E9 39 00 00 00                | jmp client.7FF900F8E2C0                            |
+00007FF900F8E287 | CC                            | int3                                               |
+00007FF900F8E288 | CC                            | int3                                               |
+00007FF900F8E289 | CC                            | int3                                               |
+00007FF900F8E28A | CC                            | int3                                               |
+00007FF900F8E28B | CC                            | int3                                               |
+00007FF900F8E28C | CC                            | int3                                               |
+00007FF900F8E28D | CC                            | int3                                               |
+00007FF900F8E28E | CC                            | int3                                               |
+00007FF900F8E28F | CC                            | int3                                               |
+00007FF900F8E290 | 48 83 EC 38                   | sub rsp,38                                         |
+00007FF900F8E294 | 48 8B C2                      | mov rax,rdx                                        |
+00007FF900F8E297 | 48 89 4C 24 28                | mov qword ptr ss:[rsp+28],rcx                      |
+00007FF900F8E29C | 48 8D 15 5D E6 28 00          | lea rdx,qword ptr ds:[7FF90121C900]                | 这里面send
+00007FF900F8E2A3 | 48 8B C8                      | mov rcx,rax                                        |
+00007FF900F8E2A6 | 48 89 54 24 20                | mov qword ptr ss:[rsp+20],rdx                      |
+00007FF900F8E2AB | 48 8D 54 24 20                | lea rdx,qword ptr ss:[rsp+20]                      |
+00007FF900F8E2B0 | E8 EB 83 FF FF                | call <client.sub_7FF900F866A0>                     |
+00007FF900F8E2B5 | 48 83 C4 38                   | add rsp,38                                         |
+00007FF900F8E2B9 | C3                            | ret                                                |
+00007FF900F8E2BA | CC                            | int3                                               |
+00007FF900F8E2BB | CC                            | int3                                               |
+00007FF900F8E2BC | CC                            | int3                                               |
+00007FF900F8E2BD | CC                            | int3                                               |
+00007FF900F8E2BE | CC                            | int3                                               |
+00007FF900F8E2BF | CC                            | int3                                               |
+00007FF900F8E2C0 | 48 89 5C 24 08                | mov qword ptr ss:[rsp+8],rbx                       |
+00007FF900F8E2C5 | 48 89 6C 24 10                | mov qword ptr ss:[rsp+10],rbp                      |
+00007FF900F8E2CA | 48 89 74 24 18                | mov qword ptr ss:[rsp+18],rsi                      |
+00007FF900F8E2CF | 57                            | push rdi                                           |
+00007FF900F8E2D0 | 48 83 EC 30                   | sub rsp,30                                         |
+00007FF900F8E2D4 | 48 8B F9                      | mov rdi,rcx                                        |
+00007FF900F8E2D7 | 41 8B F1                      | mov esi,r9d                                        |
+00007FF900F8E2DA | 8B 89 84 02 00 00             | mov ecx,dword ptr ds:[rcx+284]                     |
+00007FF900F8E2E0 | 49 8B E8                      | mov rbp,r8                                         |
+00007FF900F8E2E3 | 8B DA                         | mov ebx,edx                                        |
+00007FF900F8E2E5 | 85 C9                         | test ecx,ecx                                       |
+00007FF900F8E2E7 | 74 54                         | je client.7FF900F8E33D                             |
+00007FF900F8E2E9 | 8D 82 5A F0 FF 7F             | lea eax,qword ptr ds:[rdx+7FFFF05A]                |
+00007FF900F8E2EF | 83 F8 01                      | cmp eax,1                                          |
+00007FF900F8E2F2 | 76 49                         | jbe client.7FF900F8E33D                            |
+00007FF900F8E2F4 | 83 F9 05                      | cmp ecx,5                                          |
+00007FF900F8E2F7 | 74 40                         | je client.7FF900F8E339                             |
+00007FF900F8E2F9 | 8B 0D 3D 76 33 01             | mov ecx,dword ptr ds:[7FF9022C593C]                |
+00007FF900F8E2FF | BA 02 00 00 00                | mov edx,2                                          |
+00007FF900F8E304 | FF 15 76 96 24 00             | call qword ptr ds:[<&LoggingSystem_IsChannelEnable |
+00007FF900F8E30A | 84 C0                         | test al,al                                         |
+00007FF900F8E30C | 74 2B                         | je client.7FF900F8E339                             |
+00007FF900F8E30E | 0F BA F3 1F                   | btr ebx,1F                                         |
+00007FF900F8E312 | 8B CB                         | mov ecx,ebx                                        |
+00007FF900F8E314 | E8 57 8B 00 00                | call client.7FF900F96E70                           |
+00007FF900F8E319 | 8B 0D 1D 76 33 01             | mov ecx,dword ptr ds:[7FF9022C593C]                |
+00007FF900F8E31F | 4C 8D 05 6A E5 28 00          | lea r8,qword ptr ds:[7FF90121C890]                 | 00007FF90121C890:"Trying to send message type %u (%s) before GC connection established.  This is guaranteed to fail.\n"
+00007FF900F8E326 | 44 8B CB                      | mov r9d,ebx                                        |
+00007FF900F8E329 | 48 89 44 24 20                | mov qword ptr ss:[rsp+20],rax                      |
+00007FF900F8E32E | BA 02 00 00 00                | mov edx,2                                          |
+00007FF900F8E333 | FF 15 E7 97 24 00             | call qword ptr ds:[<&LoggingSystem_Log>]           |
+00007FF900F8E339 | 32 C0                         | xor al,al                                          |
+00007FF900F8E33B | EB 40                         | jmp client.7FF900F8E37D                            |
+00007FF900F8E33D | 48 83 7F 18 00                | cmp qword ptr ds:[rdi+18],0                        |
+00007FF900F8E342 | 74 F5                         | je client.7FF900F8E339                             |
+00007FF900F8E344 | 80 BF 89 02 00 00 00          | cmp byte ptr ds:[rdi+289],0                        |
+00007FF900F8E34B | 74 04                         | je client.7FF900F8E351                             |
+00007FF900F8E34D | B0 01                         | mov al,1                                           |
+00007FF900F8E34F | EB 2C                         | jmp client.7FF900F8E37D                            |
+00007FF900F8E351 | 0F BA F2 1F                   | btr edx,1F                                         |
+00007FF900F8E355 | 48 8D 0D D4 76 33 01          | lea rcx,qword ptr ds:[7FF9022C5A30]                |
+00007FF900F8E35C | 45 33 C9                      | xor r9d,r9d                                        |
+00007FF900F8E35F | 44 8B C6                      | mov r8d,esi                                        |
+00007FF900F8E362 | E8 59 8C 00 00                | call <client.sub_7FF900F96FC0>                     |
+00007FF900F8E367 | 48 8B 4F 18                   | mov rcx,qword ptr ds:[rdi+18]                      |
+00007FF900F8E36B | 44 8B CE                      | mov r9d,esi                                        |
+00007FF900F8E36E | 4C 8B C5                      | mov r8,rbp                                         |
+00007FF900F8E371 | 8B D3                         | mov edx,ebx                                        |
+00007FF900F8E373 | 48 8B 01                      | mov rax,qword ptr ds:[rcx]                         |
+00007FF900F8E376 | FF 10                         | call qword ptr ds:[rax]                            |
+00007FF900F8E378 | 85 C0                         | test eax,eax                                       |
+00007FF900F8E37A | 0F 94 C0                      | sete al                                            |
+00007FF900F8E37D | 48 8B 5C 24 40                | mov rbx,qword ptr ss:[rsp+40]                      |
+00007FF900F8E382 | 48 8B 6C 24 48                | mov rbp,qword ptr ss:[rsp+48]                      |
+00007FF900F8E387 | 48 8B 74 24 50                | mov rsi,qword ptr ss:[rsp+50]                      | [rsp+50]:sub_7FF900001BF0+2D
+00007FF900F8E38C | 48 83 C4 30                   | add rsp,30                                         |
+00007FF900F8E390 | 5F                            | pop rdi                                            |
+00007FF900F8E391 | C3                            | ret                                                |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GCClientSendAdd2
+48 89 5C 24 08 57 48 83 EC 20 48 8B 99 60 01 00 00 48 8B F9 83 4B 10 04 48 83 7B 28 00
+00007FF900585E15 | E8 22 E8 BA 00                | call client.7FF90113463C                           |
+00007FF900585E1A | 48 8D 0D C7 02 E8 01          | lea rcx,qword ptr ds:[7FF9024060E8]                |
+00007FF900585E21 | E8 5A B5 B7 00                | call client.7FF901101380                           |
+00007FF900585E26 | 84 C0                         | test al,al                                         |
+00007FF900585E28 | 74 19                         | je client.7FF900585E43                             |
+00007FF900585E2A | 48 8B 05 BF 02 E8 01          | mov rax,qword ptr ds:[7FF9024060F0]                |
+00007FF900585E31 | 48 8B 50 48                   | mov rdx,qword ptr ds:[rax+48]                      |
+00007FF900585E35 | 80 3A 00                      | cmp byte ptr ds:[rdx],0                            |
+00007FF900585E38 | 74 09                         | je client.7FF900585E43                             |
+00007FF900585E3A | 48 8B 4B 20                   | mov rcx,qword ptr ds:[rbx+20]                      |
+00007FF900585E3E | E8 2D A3 83 FF                | call client.7FF8FFDC0170                           |
+00007FF900585E43 | 48 8B 5B 20                   | mov rbx,qword ptr ds:[rbx+20]                      |
+00007FF900585E47 | 83 4B 10 04                   | or dword ptr ds:[rbx+10],4                         |
+00007FF900585E4B | 48 83 7B 28 00                | cmp qword ptr ds:[rbx+28],0                        |
+00007FF900585E50 | 75 26                         | jne client.7FF900585E78                            |
+00007FF900585E52 | 48 8B 05 07 1B C5 00          | mov rax,qword ptr ds:[<&g_pMemAlloc>]              |
+00007FF900585E59 | BA F0 00 00 00                | mov edx,F0                                         |
+00007FF900585E5E | 48 8B 08                      | mov rcx,qword ptr ds:[rax]                         |
+00007FF900585E61 | 48 8B 01                      | mov rax,qword ptr ds:[rcx]                         |
+00007FF900585E64 | FF 50 08                      | call qword ptr ds:[rax+8]                          |
+00007FF900585E67 | 48 85 C0                      | test rax,rax                                       |
+00007FF900585E6A | 74 08                         | je client.7FF900585E74                             |
+00007FF900585E6C | 48 8B C8                      | mov rcx,rax                                        |
+00007FF900585E6F | E8 0C 7D A8 FF                | call client.7FF90000DB80                           |
+00007FF900585E74 | 48 89 43 28                   | mov qword ptr ds:[rbx+28],rax                      |
+00007FF900585E78 | 48 8B 5B 28                   | mov rbx,qword ptr ds:[rbx+28]                      |
+00007FF900585E7C | 48 3B FB                      | cmp rdi,rbx                                        |
+00007FF900585E7F | 74 13                         | je client.7FF900585E94                             |
+00007FF900585E81 | 48 8B CB                      | mov rcx,rbx                                        |
+00007FF900585E84 | E8 07 7F A8 FF                | call client.7FF90000DD90                           |
+00007FF900585E89 | 48 8B D7                      | mov rdx,rdi                                        |
+00007FF900585E8C | 48 8B CB                      | mov rcx,rbx                                        |
+00007FF900585E8F | E8 6C A9 A8 FF                | call client.7FF900010800                           |
+00007FF900585E94 | 48 8B 5C 24 30                | mov rbx,qword ptr ss:[rsp+30]                      | [rsp+30]:sub_7FF901103F60+FB
+00007FF900585E99 | 48 83 C4 20                   | add rsp,20                                         |
+00007FF900585E9D | 5F                            | pop rdi                                            |
+00007FF900585E9E | C3                            | ret                                                |
+00007FF900585E9F | CC                            | int3                                               |
+00007FF900585EA0 | 48 89 5C 24 08                | mov qword ptr ss:[rsp+8],rbx                       |
+00007FF900585EA5 | 48 89 74 24 10                | mov qword ptr ss:[rsp+10],rsi                      |
+00007FF900585EAA | 57                            | push rdi                                           |
+00007FF900585EAB | 48 83 EC 20                   | sub rsp,20                                         |
+00007FF900585EAF | 8B F2                         | mov esi,edx                                        |
+00007FF900585EB1 | 48 8D 05 B0 33 FA 00          | lea rax,qword ptr ds:[7FF901529268]                |
+00007FF900585EB8 | 48 8B 91 60 01 00 00          | mov rdx,qword ptr ds:[rcx+160]                     |
+00007FF900585EBF | 48 8B D9                      | mov rbx,rcx                                        |
+00007FF900585EC2 | 48 89 81 40 01 00 00          | mov qword ptr ds:[rcx+140],rax                     |
+00007FF900585EC9 | 48 85 D2                      | test rdx,rdx                                       |
+00007FF900585ECC | 74 17                         | je client.7FF900585EE5                             |
+00007FF900585ECE | 48 8B 0D 0B FA E0 01          | mov rcx,qword ptr ds:[7FF9023958E0]                |
+00007FF900585ED5 | E8 66 09 A0 00                | call client.7FF900F86840                           |
+00007FF900585EDA | 48 C7 83 60 01 00 00 00 00 00 | mov qword ptr ds:[rbx+160],0                       |
+00007FF900585EE5 | 48 8D 8B 40 01 00 00          | lea rcx,qword ptr ds:[rbx+140]                     |
+00007FF900585EEC | E8 FF 02 A0 00                | call <client.sub_7FF900F861F0>                     |
+00007FF900585EF1 | 48 8B CB                      | mov rcx,rbx                                        |
+00007FF900585EF4 | E8 57 F4 A0 00                | call client.7FF900F95350                           |
+00007FF900585EF9 | 40 F6 C6 01                   | test sil,1                                         |
+00007FF900585EFD | 74 0D                         | je client.7FF900585F0C                             |
+00007FF900585EFF | BA 68 01 00 00                | mov edx,168                                        |
+00007FF900585F04 | 48 8B CB                      | mov rcx,rbx                                        |
+00007FF900585F07 | E8 94 E7 BA 00                | call client.7FF9011346A0                           |
+00007FF900585F0C | 48 8B 74 24 38                | mov rsi,qword ptr ss:[rsp+38]                      |
+00007FF900585F11 | 48 8B C3                      | mov rax,rbx                                        |
+00007FF900585F14 | 48 8B 5C 24 30                | mov rbx,qword ptr ss:[rsp+30]                      | [rsp+30]:sub_7FF901103F60+FB
+00007FF900585F19 | 48 83 C4 20                   | add rsp,20                                         |
+00007FF900585F1D | 5F                            | pop rdi                                            |
+00007FF900585F1E | C3                            | ret                                                |
+00007FF900585F1F | CC                            | int3                                               |
+00007FF900585F20 | 48 89 5C 24 08                | mov qword ptr ss:[rsp+8],rbx                       |
+00007FF900585F25 | 57                            | push rdi                                           |
+00007FF900585F26 | 48 83 EC 20                   | sub rsp,20                                         |
+00007FF900585F2A | 48 8B 99 60 01 00 00          | mov rbx,qword ptr ds:[rcx+160]                     |
+00007FF900585F31 | 48 8B F9                      | mov rdi,rcx                                        |
+00007FF900585F34 | 83 4B 10 04                   | or dword ptr ds:[rbx+10],4                         |
+00007FF900585F38 | 48 83 7B 28 00                | cmp qword ptr ds:[rbx+28],0                        |
+00007FF900585F3D | 75 26                         | jne client.7FF900585F65                            |
+00007FF900585F3F | 48 8B 05 1A 1A C5 00          | mov rax,qword ptr ds:[<&g_pMemAlloc>]              |
+00007FF900585F46 | BA F0 00 00 00                | mov edx,F0                                         |
+00007FF900585F4B | 48 8B 08                      | mov rcx,qword ptr ds:[rax]                         |
+00007FF900585F4E | 48 8B 01                      | mov rax,qword ptr ds:[rcx]                         |
+00007FF900585F51 | FF 50 08                      | call qword ptr ds:[rax+8]                          |
+00007FF900585F54 | 48 85 C0                      | test rax,rax                                       |
+00007FF900585F57 | 74 08                         | je client.7FF900585F61                             |
+00007FF900585F59 | 48 8B C8                      | mov rcx,rax                                        |
+00007FF900585F5C | E8 1F 7C A8 FF                | call client.7FF90000DB80                           |
+00007FF900585F61 | 48 89 43 28                   | mov qword ptr ds:[rbx+28],rax                      |
+00007FF900585F65 | 48 8B 4B 28                   | mov rcx,qword ptr ds:[rbx+28]                      |
+00007FF900585F69 | E8 D2 6E 47 00                | call client.7FF9009FCE40                           |
+00007FF900585F6E | 84 C0                         | test al,al                                         |
+00007FF900585F70 | 74 17                         | je client.7FF900585F89                             |
+00007FF900585F72 | 48 8B 0D FF 90 E6 01          | mov rcx,qword ptr ds:[7FF9023EF078]                | 这里构造ecx第二个成员
+00007FF900585F79 | 48 8D 97 40 01 00 00          | lea rdx,qword ptr ds:[rdi+140]                     |
+00007FF900585F80 | 48 83 C1 18                   | add rcx,18                                         |
+00007FF900585F84 | E8 07 83 A0 00                | call client.7FF900F8E290                           |
+00007FF900585F89 | B0 01                         | mov al,1                                           |
+00007FF900585F8B | 48 8B 5C 24 30                | mov rbx,qword ptr ss:[rsp+30]                      | [rsp+30]:sub_7FF901103F60+FB
+00007FF900585F90 | 48 83 C4 20                   | add rsp,20                                         |
+00007FF900585F94 | 5F                            | pop rdi                                            |
+00007FF900585F95 | C3                            | ret                                                |
+00007FF900585F96 | CC                            | int3                                               |
+00007FF900585F97 | CC                            | int3                                               |
+00007FF900585F98 | CC                            | int3                                               |
+00007FF900585F99 | CC                            | int3                                               |
+00007FF900585F9A | CC                            | int3                                               |
+00007FF900585F9B | CC                            | int3                                               |
+00007FF900585F9C | CC                            | int3                                               |
+00007FF900585F9D | CC                            | int3                                               |
+00007FF900585F9E | CC                            | int3                                               |
+00007FF900585F9F | CC                            | int3                                               |
+00007FF900585FA0 | 40 53                         | push rbx                                           |
+00007FF900585FA2 | 55                            | push rbp                                           |
+00007FF900585FA3 | 56                            | push rsi                                           |
+00007FF900585FA4 | 41 56                         | push r14                                           |
+00007FF900585FA6 | 48 83 EC 48                   | sub rsp,48                                         |
+00007FF900585FAA | 4D 8B F0                      | mov r14,r8                                         |
+00007FF900585FAD | 48 8B F2                      | mov rsi,rdx                                        |
+00007FF900585FB0 | 45 33 C0                      | xor r8d,r8d                                        |
+00007FF900585FB3 | 48 8D 15 8A B5 F8 00          | lea rdx,qword ptr ds:[7FF901511544]                | 00007FF901511544:"Tokens"
+00007FF900585FBA | 48 8B D9                      | mov rbx,rcx                                        |
+00007FF900585FBD | E8 2E F9 B7 00                | call client.7FF9011058F0                           |
+00007FF900585FC2 | 48 85 C0                      | test rax,rax                                       |
+00007FF900585FC5 | 48 0F 45 D8                   | cmovne rbx,rax                                     |
+00007FF900585FC9 | 48 8B CB                      | mov rcx,rbx                                        |
+00007FF900585FCC | E8 9F FC B7 00                | call client.7FF901105C70                           |
+00007FF900585FD1 | 48 8B E8                      | mov rbp,rax                                        |
+00007FF900585FD4 | 48 85 C0                      | test rax,rax                                       |
+00007FF900585FD7 | 0F 84 04 02 00 00             | je client.7FF9005861E1                             |
+00007FF900585FDD | 48 89 7C 24 70                | mov qword ptr ss:[rsp+70],rdi                      |
+00007FF900585FE2 | 4C 89 64 24 78                | mov qword ptr ss:[rsp+78],r12                      |
+00007FF900585FE7 | 45 33 E4                      | xor r12d,r12d                                      |
+00007FF900585FEA | 4C 89 AC 24 80 00 00 00       | mov qword ptr ss:[rsp+80],r13                      |
+00007FF900585FF2 | 4C 8D 2D 57 B5 F8 00          | lea r13,qword ptr ds:[7FF901511550]                | 00007FF901511550:"[english]"
+00007FF900585FF9 | 4C 89 7C 24 40                | mov qword ptr ss:[rsp+40],r15                      |
+00007FF900585FFE | 66 90                         | nop                                                |
+00007FF900586000 | 48 8B CD                      | mov rcx,rbp                                        |
+00007FF900586003 | E8 78 FD B7 00                | call client.7FF901105D80                           |
+00007FF900586008 | 4C 8B C0                      | mov r8,rax                                         |
+00007FF90058600B | 4C 8B F8                      | mov r15,rax                                        |
+00007FF90058600E | 4D 2B C5                      | sub r8,r13                                         |
+00007FF900586011 | 49 8B CD                      | mov rcx,r13                                        |
+00007FF900586014 | 41 0F B6 14 08                | movzx edx,byte ptr ds:[r8+rcx]                     |
+00007FF900586019 | 84 D2                         | test dl,dl                                         |
+00007FF90058601B | 74 0C                         | je client.7FF900586029                             |
+00007FF90058601D | 38 11                         | cmp byte ptr ds:[rcx],dl                           |
+00007FF90058601F | 75 16                         | jne client.7FF900586037                            |
+00007FF900586021 | 48 FF C1                      | inc rcx                                            |
+00007FF900586024 | 44 38 21                      | cmp byte ptr ds:[rcx],r12b                         |
+00007FF900586027 | 75 EB                         | jne client.7FF900586014                            |
+00007FF900586029 | 44 38 21                      | cmp byte ptr ds:[rcx],r12b                         |
+00007FF90058602C | 0F 94 C0                      | sete al                                            |
+00007FF90058602F | 84 C0                         | test al,al                                         |
+00007FF900586031 | 0F 85 7F 01 00 00             | jne client.7FF9005861B6                            |
+00007FF900586037 | 49 8B D7                      | mov rdx,r15                                        |
+00007FF90058603A | 4C 89 A4 24 88 00 00 00       | mov qword ptr ss:[rsp+88],r12                      |
+00007FF900586042 | 48 8D 8C 24 88 00 00 00       | lea rcx,qword ptr ss:[rsp+88]                      |
+00007FF90058604A | E8 61 CE B7 00                | call client.7FF901102EB0                           |
+00007FF90058604F | 8B 7E 18                      | mov edi,dword ptr ds:[rsi+18]                      |
+00007FF900586052 | 83 FF FF                      | cmp edi,FFFFFFFF                                   |
+00007FF900586055 | 74 5E                         | je client.7FF9005860B5                             |
+00007FF900586057 | 66 0F 1F 84 00 00 00 00 00    | nop word ptr ds:[rax+rax],ax                       |
+00007FF900586060 | 48 8B 56 08                   | mov rdx,qword ptr ds:[rsi+8]                       |
+00007FF900586064 | 48 8D 8C 24 88 00 00 00       | lea rcx,qword ptr ss:[rsp+88]                      |
+00007FF90058606C | 48 83 C2 10                   | add rdx,10                                         |
+
+GGetPlayTeamEcx
+00007FFA6ECCC285 | E8 D6 8C 9F FF                | call client.7FFA6E6C4F60                           |
+00007FFA6ECCC28A | 48 8D 05 FF 40 0A 01          | lea rax,qword ptr ds:[7FFA6FD70390]                |
+00007FFA6ECCC291 | 48 89 44 24 60                | mov qword ptr ss:[rsp+60],rax                      |
+00007FFA6ECCC296 | 4C 8D 45 A8                   | lea r8,qword ptr ss:[rbp-58]                       |
+00007FFA6ECCC29A | 48 8B 05 4F F7 9F 01          | mov rax,qword ptr ds:[7FFA706CB9F0]                |
+00007FFA6ECCC2A1 | 48 8D 54 24 60                | lea rdx,qword ptr ss:[rsp+60]                      |
+00007FFA6ECCC2A6 | 48 8D 0D 43 F7 9F 01          | lea rcx,qword ptr ds:[7FFA706CB9F0]                |
+00007FFA6ECCC2AD | FF 50 30                      | call qword ptr ds:[rax+30]                         |
+00007FFA6ECCC2B0 | 84 C0                         | test al,al                                         |
+00007FFA6ECCC2B2 | 74 7E                         | je client.7FFA6ECCC332                             |
+00007FFA6ECCC2B4 | 45 2B F5                      | sub r14d,r13d                                      |
+00007FFA6ECCC2B7 | 48 8D 8D B0 12 00 00          | lea rcx,qword ptr ss:[rbp+12B0]                    |
+00007FFA6ECCC2BE | 41 8B D6                      | mov edx,r14d                                       |
+00007FFA6ECCC2C1 | E8 8A B8 FF FF                | call client.7FFA6ECC7B50                           |
+00007FFA6ECCC2C6 | 4C 8B 35 BB BE 95 01          | mov r14,qword ptr ds:[7FFA70628188]                |
+00007FFA6ECCC2CD | 4D 85 F6                      | test r14,r14                                       |
+00007FFA6ECCC2D0 | 75 05                         | jne client.7FFA6ECCC2D7                            |
+00007FFA6ECCC2D2 | 0F 57 C9                      | xorps xmm1,xmm1                                    |
+00007FFA6ECCC2D5 | EB 24                         | jmp client.7FFA6ECCC2FB                            |
+00007FFA6ECCC2D7 | 41 80 7E 31 00                | cmp byte ptr ds:[r14+31],0                         |
+00007FFA6ECCC2DC | 75 17                         | jne client.7FFA6ECCC2F5                            |
+00007FFA6ECCC2DE | 41 80 7E 30 00                | cmp byte ptr ds:[r14+30],0                         |
+00007FFA6ECCC2E3 | 75 10                         | jne client.7FFA6ECCC2F5                            |
+00007FFA6ECCC2E5 | 49 8B 46 28                   | mov rax,qword ptr ds:[r14+28]                      |
+00007FFA6ECCC2E9 | 48 85 C0                      | test rax,rax                                       |
+00007FFA6ECCC2EC | 74 07                         | je client.7FFA6ECCC2F5                             |
+00007FFA6ECCC2EE | B9 01 00 00 00                | mov ecx,1                                          |
+00007FFA6ECCC2F3 | FF D0                         | call rax                                           |
+00007FFA6ECCC2F5 | F3 41 0F 10 4E 10             | movss xmm1,dword ptr ds:[r14+10]                   |
+00007FFA6ECCC2FB | 48 8B CE                      | mov rcx,rsi                                        |
+00007FFA6ECCC2FE | E8 6D F8 FF FF                | call client.7FFA6ECCBB70                           |
+00007FFA6ECCC303 | E8 B8 DA E2 FF                | call <client.sub_7FFA6EAF9DC0>                     |
+00007FFA6ECCC308 | 48 8B C8                      | mov rcx,rax                                        |
+00007FFA6ECCC30B | 48 8D 54 24 60                | lea rdx,qword ptr ss:[rsp+60]                      |
+00007FFA6ECCC310 | E8 7B DF E2 FF                | call client.7FFA6EAFA290                           |
+00007FFA6ECCC315 | 48 8B 0D 6C BE 95 01          | mov rcx,qword ptr ds:[7FFA70628188]                |
+00007FFA6ECCC31C | F3 0F 10 85 B0 12 00 00       | movss xmm0,dword ptr ss:[rbp+12B0]                 |
+00007FFA6ECCC324 | 8B 85 B4 12 00 00             | mov eax,dword ptr ss:[rbp+12B4]                    |
+00007FFA6ECCC32A | F3 0F 11 41 10                | movss dword ptr ds:[rcx+10],xmm0                   |
+00007FFA6ECCC32F | 89 41 18                      | mov dword ptr ds:[rcx+18],eax                      |
+00007FFA6ECCC332 | 48 8D 05 EF 73 C5 00          | lea rax,qword ptr ds:[7FFA6F923728]                |
+00007FFA6ECCC339 | E9 6E 01 00 00                | jmp client.7FFA6ECCC4AC                            |
+00007FFA6ECCC33E | 83 F8 75                      | cmp eax,75                                         | 75:'u'
+00007FFA6ECCC341 | 0F 85 92 00 00 00             | jne client.7FFA6ECCC3D9                            |
+00007FFA6ECCC347 | 48 8D 4C 24 60                | lea rcx,qword ptr ss:[rsp+60]                      |
+00007FFA6ECCC34C | E8 EF A6 AF FF                | call client.7FFA6E7C6A40                           |
+00007FFA6ECCC351 | 48 8D 05 00 41 0A 01          | lea rax,qword ptr ds:[7FFA6FD70458]                |
+00007FFA6ECCC358 | 48 89 44 24 60                | mov qword ptr ss:[rsp+60],rax                      |
+00007FFA6ECCC35D | 4C 8D 45 A8                   | lea r8,qword ptr ss:[rbp-58]                       |
+00007FFA6ECCC361 | 48 8B 05 60 16 A0 01          | mov rax,qword ptr ds:[7FFA706CD9C8]                |
+00007FFA6ECCC368 | 48 8D 54 24 60                | lea rdx,qword ptr ss:[rsp+60]                      |
+00007FFA6ECCC36D | 48 8D 0D 54 16 A0 01          | lea rcx,qword ptr ds:[7FFA706CD9C8]                |
+00007FFA6ECCC374 | FF 50 30                      | call qword ptr ds:[rax+30]                         |
+00007FFA6ECCC377 | 84 C0                         | test al,al                                         |
+00007FFA6ECCC379 | 74 3C                         | je client.7FFA6ECCC3B7                             |
+00007FFA6ECCC37B | 45 2B F5                      | sub r14d,r13d                                      |
+00007FFA6ECCC37E | 48 8D 8D B8 12 00 00          | lea rcx,qword ptr ss:[rbp+12B8]                    |
+00007FFA6ECCC385 | 41 8B D6                      | mov edx,r14d                                       |
+00007FFA6ECCC388 | E8 C3 B7 FF FF                | call client.7FFA6ECC7B50                           |
+00007FFA6ECCC38D | 48 8D 54 24 60                | lea rdx,qword ptr ss:[rsp+60]                      |
+00007FFA6ECCC392 | 48 8B CE                      | mov rcx,rsi                                        |
+00007FFA6ECCC395 | E8 66 2F 00 00                | call client.7FFA6ECCF300                           |
+00007FFA6ECCC39A | 48 8B 0D E7 BD 95 01          | mov rcx,qword ptr ds:[7FFA70628188]                |
+00007FFA6ECCC3A1 | F3 0F 10 85 B8 12 00 00       | movss xmm0,dword ptr ss:[rbp+12B8]                 |
+00007FFA6ECCC3A9 | 8B 85 BC 12 00 00             | mov eax,dword ptr ss:[rbp+12BC]                    |
+00007FFA6ECCC3AF | F3 0F 11 41 10                | movss dword ptr ds:[rcx+10],xmm0                   |
+00007FFA6ECCC3B4 | 89 41 18                      | mov dword ptr ds:[rcx+18],eax                      |
+00007FFA6ECCC3B7 | 48 8D 05 8A 25 C9 00          | lea rax,qword ptr ds:[7FFA6F95E948]                |
+00007FFA6ECCC3BE | 48 8D 15 33 4D B8 01          | lea rdx,qword ptr ds:[7FFA708510F8]                |
+00007FFA6ECCC3C5 | 48 89 44 24 60                | mov qword ptr ss:[rsp+60],rax                      |
+00007FFA6ECCC3CA | 48 8D 4C 24 78                | lea rcx,qword ptr ss:[rsp+78]                      |
+00007FFA6ECCC3CF | E8 9C 37 77 FF                | call client.7FFA6E43FB70                           |
+00007FFA6ECCC3D4 | E9 D8 00 00 00                | jmp client.7FFA6ECCC4B1                            |
+00007FFA6ECCC3D9 | 83 F8 7C                      | cmp eax,7C                                         | 7C:'|'
+00007FFA6ECCC3DC | 75 7F                         | jne client.7FFA6ECCC45D                            |
+00007FFA6ECCC3DE | 48 8D 4C 24 60                | lea rcx,qword ptr ss:[rsp+60]                      |
+00007FFA6ECCC3E3 | E8 A8 C7 AF FF                | call client.7FFA6E7C8B90                           |
+00007FFA6ECCC3E8 | 48 8D 05 11 3E 0A 01          | lea rax,qword ptr ds:[<&sub_7FFA6E7C8C30>]         |
+00007FFA6ECCC3EF | 48 89 44 24 60                | mov qword ptr ss:[rsp+60],rax                      |
+00007FFA6ECCC3F4 | 4C 8D 45 A8                   | lea r8,qword ptr ss:[rbp-58]                       |
+00007FFA6ECCC3F8 | 48 8B 05 F9 15 A0 01          | mov rax,qword ptr ds:[7FFA706CD9F8]                |
+00007FFA6ECCC3FF | 48 8D 54 24 60                | lea rdx,qword ptr ss:[rsp+60]                      |
+00007FFA6ECCC404 | 48 8D 0D ED 15 A0 01          | lea rcx,qword ptr ds:[7FFA706CD9F8]                |
+00007FFA6ECCC40B | FF 50 30                      | call qword ptr ds:[rax+30]                         |
+00007FFA6ECCC40E | 84 C0                         | test al,al                                         |
+00007FFA6ECCC410 | 74 33                         | je client.7FFA6ECCC445                             |
+00007FFA6ECCC412 | 45 2B F5                      | sub r14d,r13d                                      |
+00007FFA6ECCC415 | 48 8D 4D A0                   | lea rcx,qword ptr ss:[rbp-60]                      |
+00007FFA6ECCC419 | 41 8B D6                      | mov edx,r14d                                       |
+00007FFA6ECCC41C | E8 2F B7 FF FF                | call client.7FFA6ECC7B50                           |
+00007FFA6ECCC421 | 48 8D 54 24 60                | lea rdx,qword ptr ss:[rsp+60]                      |
+00007FFA6ECCC426 | 48 8B CE                      | mov rcx,rsi                                        |
+00007FFA6ECCC429 | E8 32 30 00 00                | call client.7FFA6ECCF460                           |
+00007FFA6ECCC42E | 48 8B 0D 53 BD 95 01          | mov rcx,qword ptr ds:[7FFA70628188]                |
+00007FFA6ECCC435 | F3 0F 10 45 A0                | movss xmm0,dword ptr ss:[rbp-60]                   |
+00007FFA6ECCC43A | 8B 45 A4                      | mov eax,dword ptr ss:[rbp-5C]                      |
+00007FFA6ECCC43D | F3 0F 11 41 10                | movss dword ptr ds:[rcx+10],xmm0                   |
+00007FFA6ECCC442 | 89 41 18                      | mov dword ptr ds:[rcx+18],eax                      |
+00007FFA6ECCC445 | 48 8D 05 74 11 C9 00          | lea rax,qword ptr ds:[<&sub_7FFA6E7C8C30>]         |
+00007FFA6ECCC44C | 48 8D 4C 24 78                | lea rcx,qword ptr ss:[rsp+78]                      |
+00007FFA6ECCC451 | 48 89 44 24 60                | mov qword ptr ss:[rsp+60],rax                      |
+00007FFA6ECCC456 | E8 E5 79 79 FF                | call client.7FFA6E463E40                           |
+00007FFA6ECCC45B | EB 54                         | jmp client.7FFA6ECCC4B1                            |
+00007FFA6ECCC45D | 3D F5 01 00 00                | cmp eax,1F5                                        |
+00007FFA6ECCC462 | 75 57                         | jne client.7FFA6ECCC4BB                            |
+00007FFA6ECCC464 | 48 8D 4C 24 60                | lea rcx,qword ptr ss:[rsp+60]                      |
+00007FFA6ECCC469 | E8 B2 11 A1 FF                | call <client.sub_7FFA6E6DD620>                     |
+00007FFA6ECCC46E | 48 8D 05 53 3E 0A 01          | lea rax,qword ptr ds:[7FFA6FD702C8]                |
+00007FFA6ECCC475 | 48 89 44 24 60                | mov qword ptr ss:[rsp+60],rax                      |
+00007FFA6ECCC47A | 4C 8D 45 A8                   | lea r8,qword ptr ss:[rbp-58]                       |
+00007FFA6ECCC47E | 48 8B 05 73 F6 9F 01          | mov rax,qword ptr ds:[7FFA706CBAF8]                |
+00007FFA6ECCC485 | 48 8D 54 24 60                | lea rdx,qword ptr ss:[rsp+60]                      |
+00007FFA6ECCC48A | 48 8D 0D 67 F6 9F 01          | lea rcx,qword ptr ds:[7FFA706CBAF8]                |
+00007FFA6ECCC491 | FF 50 30                      | call qword ptr ds:[rax+30]                         |
+00007FFA6ECCC494 | 84 C0                         | test al,al                                         |
+00007FFA6ECCC496 | 74 0D                         | je client.7FFA6ECCC4A5                             |
+00007FFA6ECCC498 | 48 8D 54 24 60                | lea rdx,qword ptr ss:[rsp+60]                      |
+00007FFA6ECCC49D | 48 8B CE                      | mov rcx,rsi                                        |
+00007FFA6ECCC4A0 | E8 DB 8B 00 00                | call client.7FFA6ECD5080                           |
+00007FFA6ECCC4A5 | 48 8D 05 44 1F C6 00          | lea rax,qword ptr ds:[7FFA6F92E3F0]                |
+00007FFA6ECCC4AC | 48 89 44 24 60                | mov qword ptr ss:[rsp+60],rax                      |
+00007FFA6ECCC4B1 | 48 8D 4C 24 68                | lea rcx,qword ptr ss:[rsp+68]                      |
+00007FFA6ECCC4B6 | E8 65 68 79 FF                | call <client.sub_7FFA6E462D20>                     |
+00007FFA6ECCC4BB | 8B 85 A8 12 00 00             | mov eax,dword ptr ss:[rbp+12A8]                    |
+00007FFA6ECCC4C1 | 4C 8B 74 24 50                | mov r14,qword ptr ss:[rsp+50]                      |
+00007FFA6ECCC4C6 | FF C7                         | inc edi                                            |
+00007FFA6ECCC4C8 | 49 83 C7 20                   | add r15,20                                         |
+00007FFA6ECCC4CC | 41 3B 3E                      | cmp edi,dword ptr ds:[r14]                         |
+00007FFA6ECCC4CF | 0F 8C 6B FD FF FF             | jl client.7FFA6ECCC240                             |
+00007FFA6ECCC4D5 | E9 E5 2D 00 00                | jmp client.7FFA6ECCF2BF                            |
+00007FFA6ECCC4DA | 3B 86 70 01 00 00             | cmp eax,dword ptr ds:[rsi+170]                     |
+00007FFA6ECCC4E0 | 0F 85 D7 07 00 00             | jne client.7FFA6ECCCCBD                            |
+00007FFA6ECCC4E6 | 48 8B 05 9B 9D C1 01          | mov rax,qword ptr ds:[7FFA708E6288]                |
+00007FFA6ECCC4ED | 83 78 58 00                   | cmp dword ptr ds:[rax+58],0                        |
+00007FFA6ECCC4F1 | 0F 85 C8 2D 00 00             | jne client.7FFA6ECCF2BF                            |
+00007FFA6ECCC4F7 | 49 8B 06                      | mov rax,qword ptr ds:[r14]                         |
+00007FFA6ECCC4FA | 48 8D 15 5F 45 DD 00          | lea rdx,qword ptr ds:[7FFA6FAA0A60]                | 00007FFA6FAA0A60:"victim_userid"
+00007FFA6ECCC501 | 45 33 C0                      | xor r8d,r8d                                        |
+00007FFA6ECCC504 | 49 8B CE                      | mov rcx,r14                                        |
+00007FFA6ECCC507 | FF 50 38                      | call qword ptr ds:[rax+38]                         |
+00007FFA6ECCC50A | 44 8B F8                      | mov r15d,eax                                       |
+00007FFA6ECCC50D | 3D FF 00 00 00                | cmp eax,FF                                         |
+00007FFA6ECCC512 | 0F 84 A7 2D 00 00             | je client.7FFA6ECCF2BF                             |
+00007FFA6ECCC518 | 85 C0                         | test eax,eax                                       |
+00007FFA6ECCC51A | 0F 88 9F 2D 00 00             | js client.7FFA6ECCF2BF                             |
+00007FFA6ECCC520 | 48 8B 0D B1 F4 BB 01          | mov rcx,qword ptr ds:[7FFA7088B9D8]                | GGetPlayTeamEcx
+00007FFA6ECCC527 | 3B 81 E8 03 00 00             | cmp eax,dword ptr ds:[rcx+3E8]                     |
+00007FFA6ECCC52D | 0F 8D 8C 2D 00 00             | jge client.7FFA6ECCF2BF                            |
+00007FFA6ECCC533 | 8B D0                         | mov edx,eax                                        |
+00007FFA6ECCC535 | E8 D6 CD D4 FF                | call client.7FFA6EA19310                           | GetPlayerTeam
+00007FFA6ECCC53A | 4D 8B 0E                      | mov r9,qword ptr ds:[r14]                          |
+00007FFA6ECCC53D | 48 8D 15 70 43 DD 00          | lea rdx,qword ptr ds:[7FFA6FAA08B4]                | 00007FFA6FAA08B4:"bounty"
+00007FFA6ECCC544 | 45 33 C0                      | xor r8d,r8d                                        |
+00007FFA6ECCC547 | 49 8B CE                      | mov rcx,r14                                        |
+00007FFA6ECCC54A | 44 8B E0                      | mov r12d,eax                                       |
+00007FFA6ECCC54D | 41 FF 51 38                   | call qword ptr ds:[r9+38]                          |
+00007FFA6ECCC551 | 4D 8B 0E                      | mov r9,qword ptr ds:[r14]                          |
+00007FFA6ECCC554 | 48 8D 15 65 43 DD 00          | lea rdx,qword ptr ds:[7FFA6FAA08C0]                | 00007FFA6FAA08C0:"proximity_gold"
+00007FFA6ECCC55B | 45 33 C0                      | xor r8d,r8d                                        |
+00007FFA6ECCC55E | 49 8B CE                      | mov rcx,r14                                        |
+00007FFA6ECCC561 | 8B D8                         | mov ebx,eax                                        |
+00007FFA6ECCC563 | 41 FF 51 38                   | call qword ptr ds:[r9+38]                          |
+00007FFA6ECCC567 | 4D 8B 0E                      | mov r9,qword ptr ds:[r14]                          |
+00007FFA6ECCC56A | 48 8D 15 97 43 DD 00          | lea rdx,qword ptr ds:[7FFA6FAA0908]                | 00007FFA6FAA0908:"nearby_heroes"
+00007FFA6ECCC571 | 45 33 C0                      | xor r8d,r8d                                        |
+00007FFA6ECCC574 | 49 8B CE                      | mov rcx,r14                                        |
+00007FFA6ECCC577 | 8B F8                         | mov edi,eax                                        |
+00007FFA6ECCC579 | 41 FF 51 38                   | call qword ptr ds:[r9+38]                          |
+00007FFA6ECCC57D | 41 B9 14 00 00 00             | mov r9d,14                                         |
+00007FFA6ECCC583 | C7 44 24 28 01 00 00 00       | mov dword ptr ss:[rsp+28],1                        |
+00007FFA6ECCC58B | 4C 8D 05 FE 32 D8 00          | lea r8,qword ptr ds:[7FFA6FA4F890]                 | 00007FFA6FA4F890:"%c%d%c"
+00007FFA6ECCC592 | 89 5C 24 20                   | mov dword ptr ss:[rsp+20],ebx                      |
+00007FFA6ECCC596 | BA 00 01 00 00                | mov edx,100                                        |
+00007FFA6ECCC59B | 48 8D 8D 50 03 00 00          | lea rcx,qword ptr ss:[rbp+350]                     |
+00007FFA6ECCC5A2 | 8B F0                         | mov esi,eax                                        |
+00007FFA6ECCC5A4 | FF 15 96 C3 A9 00             | call qword ptr ds:[<&V_snprintf>]                  |
+00007FFA6ECCC5AA | 41 B9 14 00 00 00             | mov r9d,14                                         |
+00007FFA6ECCC5B0 | C7 44 24 28 01 00 00 00       | mov dword ptr ss:[rsp+28],1                        |
+00007FFA6ECCC5B8 | 4C 8D 05 D1 32 D8 00          | lea r8,qword ptr ds:[7FFA6FA4F890]                 | 00007FFA6FA4F890:"%c%d%c"
+00007FFA6ECCC5BF | 89 7C 24 20                   | mov dword ptr ss:[rsp+20],edi                      |
+00007FFA6ECCC5C3 | BA 00 01 00 00                | mov edx,100                                        |
+00007FFA6ECCC5C8 | 48 8D 4D D0                   | lea rcx,qword ptr ss:[rbp-30]                      |
+00007FFA6ECCC5CC | FF 15 6E C3 A9 00             | call qword ptr ds:[<&V_snprintf>]                  |
+00007FFA6ECCC5D2 | 41 B9 14 00 00 00             | mov r9d,14                                         |
+00007FFA6ECCC5D8 | C7 44 24 28 01 00 00 00       | mov dword ptr ss:[rsp+28],1                        |
+00007FFA6ECCC5E0 | 4C 8D 05 A9 32 D8 00          | lea r8,qword ptr ds:[7FFA6FA4F890]                 | 00007FFA6FA4F890:"%c%d%c"
+00007FFA6ECCC5E7 | 89 74 24 20                   | mov dword ptr ss:[rsp+20],esi                      |
+00007FFA6ECCC5EB | BA 00 01 00 00                | mov edx,100                                        |
+00007FFA6ECCC5F0 | 48 8D 8D 10 01 00 00          | lea rcx,qword ptr ss:[rbp+110]                     |

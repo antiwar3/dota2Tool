@@ -1,0 +1,1 @@
+protoc.exe dota_gcmessages.proto --cpp_out=./
